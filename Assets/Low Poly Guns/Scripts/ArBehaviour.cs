@@ -11,8 +11,12 @@ public class ArBehaviour : MonoBehaviour
     public ParticleSystem flash;
 
     private float Delay= 0f;
+
+    public Recoil recoilScript;
     //public GameObject FleshImpactEffect;
     // public GameObject ElseImpactEffect;
+
+    
     void Update()
     {
         if (firetype)
@@ -20,7 +24,7 @@ public class ArBehaviour : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time >= Delay)
         {
             Delay = Time.time + 1f / firerate;
-            Shoot();
+            Shoot(firetype);
         }
         }
 
@@ -29,13 +33,22 @@ public class ArBehaviour : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && Time.time >= Delay)
             {
                 Delay = Time.time + 1f / firerate;
-                Shoot();
+                Shoot(firetype);
             }
         }
     }
 
-    void Shoot()
+    void Shoot(bool value)
     {
+        if (value)
+        { 
+        recoilScript.RecoilFire1();
+        }
+
+        else
+        {
+            recoilScript.RecoilFire2();
+        }
         flash.Play();
         RaycastHit hit;
         if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,range))
