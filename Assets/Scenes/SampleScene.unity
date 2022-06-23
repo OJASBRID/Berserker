@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -708,9 +708,9 @@ MonoBehaviour:
   cam: {fileID: 963194227}
   firetype: 1
   flash: {fileID: 143734582}
-  maxAmmo: 10
+  maxAmmo: 30
   currentAmmo: 0
-  reloadTime: 1
+  reloadTime: 2.5
   animator: {fileID: 454234872}
   recoilScript: {fileID: 888607971}
 --- !u!95 &454234872
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   cam: {fileID: 963194227}
   firetype: 0
   flash: {fileID: 912645660}
-  maxAmmo: 10
+  maxAmmo: 6
   currentAmmo: 0
   reloadTime: 1
   animator: {fileID: 861022110}
