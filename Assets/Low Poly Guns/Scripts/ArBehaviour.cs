@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using System.Collections;
 
 public class ArBehaviour : MonoBehaviour
 {
@@ -9,16 +10,38 @@ public class ArBehaviour : MonoBehaviour
     public Camera cam;
     public bool firetype;
     public ParticleSystem flash;
-
+    public int maxAmmo = 10;
+    public int currentAmmo;
+    public float reloadTime = 1f;
+    private bool isReloading = false;
     private float Delay= 0f;
-
+    public Animator animator;
+         
     public Recoil recoilScript;
     //public GameObject FleshImpactEffect;
     // public GameObject ElseImpactEffect;
 
-    
+    private void Start()
+    { 
+        
+      currentAmmo = maxAmmo;
+
+    }
+
+    private void OnEnable()
+    {
+        isReloading = false;
+        animator.SetBool("Reloading", false);
+    }
     void Update()
     {
+        if (isReloading)
+            return;
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
         if (firetype)
         { 
         if (Input.GetButton("Fire1") && Time.time >= Delay)
@@ -37,9 +60,21 @@ public class ArBehaviour : MonoBehaviour
             }
         }
     }
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        Debug.Log("Reloading...");
+        animator.SetBool("Reloading", true);
+        yield return new WaitForSeconds(reloadTime-.25f);
+        animator.SetBool("Reloading", false);
+        yield return new WaitForSeconds(.25f);
+        currentAmmo = maxAmmo;
+        isReloading = false;
 
+    }
     void Shoot(bool value)
     {
+        currentAmmo--;
         if (value)
         { 
         recoilScript.RecoilFire1();
