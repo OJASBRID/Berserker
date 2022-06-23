@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     // Update is called once per frame
     void Update()
-    {
+    {    
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+        SceneManager.LoadScene("PauseMenu");
+        Cursor.lockState = CursorLockMode.None;
+        }
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundmask);
 
         if(isGrounded && velocity.y < 0)
