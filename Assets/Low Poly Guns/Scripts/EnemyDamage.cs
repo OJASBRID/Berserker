@@ -4,15 +4,27 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public float health = 100f;
-    public GameObject gameObjects;
+    public GameObject[] preFab;
+    public Vector3 pos;
+
     public void Damage(float amount)
     {
         health -= amount;
         if(health <= 0)
         {
+           
             Destroy(gameObject);
-            Instantiate(gameObjects, gameObject.transform);
+            pos.x = transform.position.x;
+
+            pos.y = (float)(transform.position.y + 0.5);
+            pos.z = transform.position.z;
+
+
+            Instantiate(preFab[Random.Range(0,3)], pos, transform.rotation);
         }
     }
+
+   
+    
 
 }
