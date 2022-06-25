@@ -473,7 +473,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.005947288, y: 0.20827577, z: 0.031448126}
+    m_Center: {x: -0.005947288, y: 0.20827577, z: 0.5}
     m_Extent: {x: 0.11543003, y: 0.5866449, z: 2.4479585}
   m_DirtyAABB: 0
 --- !u!114 &454234870
@@ -520,6 +520,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &454234874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454234865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23086005, y: 1.1732898, z: 5.3}
+  m_Center: {x: -0.0059491955, y: 0.20827577, z: 0.031447172}
 --- !u!4 &573353019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8f9696fb6017be144a307b6586855ac0,
@@ -1940,6 +1953,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 744016080201741366, guid: f8513bda1fb276b4495189f946c267e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 744016080214405189, guid: f8513bda1fb276b4495189f946c267e5,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2048,6 +2066,11 @@ PrefabInstance:
     - target: {fileID: 4681732462022818317, guid: f8513bda1fb276b4495189f946c267e5,
         type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681732462022818317, guid: f8513bda1fb276b4495189f946c267e5,
+        type: 3}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4681732462022818317, guid: f8513bda1fb276b4495189f946c267e5,
@@ -2175,6 +2198,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9023475846709596610, guid: f8513bda1fb276b4495189f946c267e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8513bda1fb276b4495189f946c267e5, type: 3}
 --- !u!1 &1289298730
@@ -2188,7 +2216,6 @@ GameObject:
   - component: {fileID: 1289298733}
   - component: {fileID: 1289298732}
   - component: {fileID: 1289298731}
-  - component: {fileID: 1289298734}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2251,20 +2278,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1289298734
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289298730}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: -1, z: 0}
 --- !u!4 &1374523438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 744016080385129774, guid: f8513bda1fb276b4495189f946c267e5,
