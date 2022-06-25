@@ -20,8 +20,8 @@ public class Recoil : MonoBehaviour
     
 
 
-    void Start()
-    {
+    void Start() {
+       
 
     }
 
