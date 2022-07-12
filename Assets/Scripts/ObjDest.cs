@@ -7,11 +7,13 @@ public class ObjDest : MonoBehaviour
     public GameObject Player;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform == Player.transform)
+        if (other.gameObject == Player)
         {
 
             Destroy(gameObject);
         }
 
     }
+
+   
 }

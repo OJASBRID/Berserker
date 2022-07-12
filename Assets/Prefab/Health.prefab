@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7239124376499699836}
   - component: {fileID: 5275202698699559614}
   - component: {fileID: 7946549414114544642}
-  - component: {fileID: 7892017034884408536}
   - component: {fileID: 6987557397687473533}
+  - component: {fileID: 8492682408286190177}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7892017034884408536
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4268302047805035141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.55
-  m_Height: 2.0000005
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6987557397687473533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,4 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc02e49de0d0b0b4cbeb319acdeebde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 4596931556522226171, guid: 7d69bbce63458e64a82c287eda71fbde, type: 3}
+  Player: {fileID: 1182811354758914, guid: 6fcc382533eeddd4cb59b9e20acca545, type: 3}
+--- !u!135 &8492682408286190177
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268302047805035141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0.00000005960464, y: 0.000015258789, z: -0.000000089406974}
