@@ -18,6 +18,8 @@ public class ArBehaviour : MonoBehaviour
     public Animator animator;
     public int totalammo;
     [SerializeField] LayerMask layerMask;
+    public AudioSource audioSource1;
+    
 
     public Recoil recoilScript;
     //public GameObject FleshImpactEffect;
@@ -47,8 +49,9 @@ public class ArBehaviour : MonoBehaviour
         if (firetype)
         {
             if (Input.GetButton("Fire1") && Time.time >= Delay)
-            {
+            {   
                 Delay = Time.time + 1f / firerate;
+                
                 Shoot(firetype);
             }
         }
@@ -58,6 +61,7 @@ public class ArBehaviour : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && Time.time >= Delay)
             {
                 Delay = Time.time + 1f / firerate;
+                
                 Shoot(firetype);
             }
         }
@@ -112,7 +116,8 @@ public class ArBehaviour : MonoBehaviour
             recoilScript.RecoilFire2();
         }
         flash.Play();
-        RaycastHit hit;
+            audioSource1.Play();
+            RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range,layerMask))
 
                 

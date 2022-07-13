@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     //Animator m_Animator;
-    //public AudioSource m_AudioSource;
+    
 
 
     public float speed = 6f;
@@ -18,13 +18,14 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundmask;
+    public bool isWalking;
 
     Vector3 velocity;
     bool isGrounded;
     // Update is called once per frame
     /*void start()
    {
-       m_AudioSource=GetComponent<AudioSource>();
+       
    }*/
     void Update()
     {    
@@ -44,21 +45,11 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         bool hasHorizontalInput = !Mathf.Approximately(x,0f);
         bool hasVerticalInput = !Mathf.Approximately(z,0f);
-        bool isWalking = hasHorizontalInput||hasVerticalInput;
+        isWalking = hasHorizontalInput||hasVerticalInput;
 
 
         Vector3 move = transform.right * x + transform.forward * z;
-        /*if(isWalking)
-        {
-            if(!m_AudioSource.isPlaying)
-            {
-                m_AudioSource.Play();
-            }
-        }
-        else
-        {
-            m_AudioSource.Stop();
-        }*/
+        
 
         controller.Move(move * speed * Time.deltaTime);
 
