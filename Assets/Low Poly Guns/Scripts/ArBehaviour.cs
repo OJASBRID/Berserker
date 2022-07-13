@@ -17,6 +17,7 @@ public class ArBehaviour : MonoBehaviour
     private float Delay = 0f;
     public Animator animator;
     public int totalammo;
+    [SerializeField] LayerMask layerMask;
 
     public Recoil recoilScript;
     //public GameObject FleshImpactEffect;
@@ -87,6 +88,16 @@ public class ArBehaviour : MonoBehaviour
         isReloading = false;
 
     }
+
+
+    public void Add()
+    {
+        
+        
+            totalammo += maxAmmo;
+        
+    }
+
     void Shoot(bool value)
     { if (!(currentAmmo + totalammo <= 0))
         { 
@@ -102,22 +113,26 @@ public class ArBehaviour : MonoBehaviour
         }
         flash.Play();
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
-        {
-            EnemyDamage target = hit.transform.GetComponent<EnemyDamage>();
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range,layerMask))
 
-            {
-                if (target != null)
-                {
-                    target.Damage(damage);
-                    // GameObject impact1 = Instantiate(FleshImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                    //Destroy(impact1, 1.5f);
-                }
+                
+                    {
+                        EnemyDamage target = hit.transform.GetComponent<EnemyDamage>();
+                        
 
-                //GameObject impact2 = Instantiate(ElseImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                //Destroy(impact2, 1.5f);
-            }
-        }
+                        {
+                            if (target != null)
+                            {
+                                target.Damage(damage);
+                                // GameObject impact1 = Instantiate(FleshImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                                //Destroy(impact1, 1.5f);
+                            }
+
+                            //GameObject impact2 = Instantiate(ElseImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                            //Destroy(impact2, 1.5f);
+                        }
+                    }
+                
     }
 }
 }

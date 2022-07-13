@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - ayenime
+  - halth
   layers:
   - Default
   - TransparentFX
@@ -18,10 +20,10 @@ TagManager:
   - Ground
   - Postprocessing
   - 
+  - Enemies
   - 
-  - 
-  - 
-  - 
+  - Destroy
+  - Interact
   - 
   - 
   - 

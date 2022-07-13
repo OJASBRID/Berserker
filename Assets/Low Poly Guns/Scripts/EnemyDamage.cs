@@ -16,7 +16,7 @@ public class EnemyDamage : MonoBehaviour
             Destroy(gameObject);
             pos.x = transform.position.x;
 
-            pos.y = (float)(transform.position.y + 0.5);
+            pos.y = (float)(transform.position.y + 1);
             pos.z = transform.position.z;
 
 
