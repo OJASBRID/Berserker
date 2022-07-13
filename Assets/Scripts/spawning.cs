@@ -8,6 +8,9 @@ public class spawning : MonoBehaviour
     public float time;
     private Vector3[] positions= new Vector3[11];
     public int EnemyCount;
+    public bool Area1;
+    public bool Area2;
+    public bool Area3;
     
     // Start is called before the first frame update
     void Start()
@@ -49,4 +52,15 @@ public class spawning : MonoBehaviour
         }
     }
 
+    public void stitch1()
+    {
+        Area1 = !Area1;
+        Area2 = !Area2;
+    }
+
+    public void stitch2()
+    {
+        Area3 = !Area3;
+        Area2 = !Area2;
+    }
 }
