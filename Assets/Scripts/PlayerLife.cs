@@ -26,6 +26,7 @@ public class PlayerLife : MonoBehaviour
     {
         if(characterhealth <= 0f)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("EndPage");
         }
     }
