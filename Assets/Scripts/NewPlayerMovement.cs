@@ -24,11 +24,7 @@ public class NewPlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("PauseMenu");
-            Cursor.lockState = CursorLockMode.None;
-        }
+        
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");

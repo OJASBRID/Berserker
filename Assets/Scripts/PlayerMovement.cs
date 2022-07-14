@@ -7,9 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     //Animator m_Animator;
-    
 
-
+    public GameObject pauseMenu;
     public float speed = 6f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -23,18 +22,16 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     // Update is called once per frame
-    /*void start()
-   {
-       
-   }*/
+    
     void Update()
-    {    
-        if(Input.GetKeyDown(KeyCode.Escape))
+    {
+      /*  if (Input.GetKeyDown(KeyCode.Escape))
         {
-        SceneManager.LoadScene("PauseMenu");
-        Cursor.lockState = CursorLockMode.None;
-        }
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundmask);
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }*/
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundmask);
 
         if(isGrounded && velocity.y < 0)
         {
