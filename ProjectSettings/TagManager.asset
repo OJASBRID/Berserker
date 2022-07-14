@@ -7,6 +7,7 @@ TagManager:
   - Shootable
   - ayenime
   - halth
+  - Area change
   layers:
   - Default
   - TransparentFX
