@@ -8,6 +8,6 @@ public class Play : MonoBehaviour
    public void Button1()
 {
 SceneManager.LoadScene("SampleScene");
-
+        Time.timeScale = 1f;
 }
 }
