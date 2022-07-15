@@ -4357,6 +4357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3753424332137968081, guid: ac8db1536617780448e3fb7fd71018a8,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1289298743}
+    - target: {fileID: 3753424332137968081, guid: ac8db1536617780448e3fb7fd71018a8,
+        type: 3}
       propertyPath: preFab.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5293,6 +5298,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1929373677}
   IsPaused: 0
+--- !u!114 &1289298743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283086930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973c71c3ef50064483b76d45f0a2f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 5000
+  multiplier1: 10
+  multiplier2: 30
+  multiplier3: 50
 --- !u!1001 &1293669686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7512,6 +7533,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 399903210, guid: 49c4f31812655344e8d33fdd670b0400, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1289298743}
     - target: {fileID: 399903210, guid: 49c4f31812655344e8d33fdd670b0400, type: 3}
       propertyPath: preFab.Array.size
       value: 3

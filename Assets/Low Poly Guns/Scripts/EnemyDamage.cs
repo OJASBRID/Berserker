@@ -6,13 +6,21 @@ public class EnemyDamage : MonoBehaviour
     public float health = 100f;
     public GameObject[] preFab;
     public Vector3 pos;
+    public Score score;
 
     public void Damage(float amount)
     {
         health -= amount;
         if(health <= 0)
         {
-           
+            if(gameObject.name =="Zombie1")
+            {
+                score.Shoot1();
+            }
+            else if(gameObject.name == "Zombie2")
+            {
+                score.Shoot2();
+            }
             Destroy(gameObject);
             pos.x = transform.position.x;
 
