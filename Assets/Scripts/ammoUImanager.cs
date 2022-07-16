@@ -9,12 +9,24 @@ public class ammoUImanager : MonoBehaviour
     [SerializeField]
     public Text _ammoText1;
     public Text _ammoText2;
-    public void UpdateAmmo1(int count1)
+    public ArBehaviour arBehaviour1;
+    public ArBehaviour arBehaviour2;
+    public WeaponSwitch weaponSwitch;
+
+
+    void Update()
     {
-        _ammoText1.text = count1 + "/";
-    }
-    public void UpdateAmmo2(int count2)
-    {
-        _ammoText2.text = count2+"";
+        if (weaponSwitch.weaponNo == 0)
+        {
+            _ammoText1.text = arBehaviour1.currentAmmo + "/";
+            _ammoText2.text = arBehaviour1.totalammo + "";
+           
+        }
+
+        else if(weaponSwitch.weaponNo == 1)
+        {
+            _ammoText1.text = arBehaviour2.currentAmmo + "/";
+            _ammoText2.text = arBehaviour2.totalammo + "";
+        }
     }
 }

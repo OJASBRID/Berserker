@@ -30,7 +30,7 @@ public class ArBehaviour : MonoBehaviour
     {
 
         currentAmmo = maxAmmo;
-        _uimanager = GameObject.Find("Canvas").GetComponent<ammoUImanager>();
+       // _uimanager = GameObject.Find("Canvas").GetComponent<ammoUImanager>();
     }
 
     private void OnEnable()
@@ -79,7 +79,7 @@ public class ArBehaviour : MonoBehaviour
         if (totalammo < maxAmmo && totalammo > 0)
         {
             currentAmmo = totalammo;
-            _uimanager.UpdateAmmo1(currentAmmo);
+           // _uimanager.UpdateAmmo1(currentAmmo);
             totalammo = 0;
 
         }
@@ -87,8 +87,8 @@ public class ArBehaviour : MonoBehaviour
         { 
         totalammo = totalammo - maxAmmo + currentAmmo;
         currentAmmo = maxAmmo;
-            _uimanager.UpdateAmmo1(currentAmmo);
-            _uimanager.UpdateAmmo2(totalammo);
+            //_uimanager.UpdateAmmo1(currentAmmo);
+           // _uimanager.UpdateAmmo2(totalammo);
 
         }
 
@@ -104,14 +104,14 @@ public class ArBehaviour : MonoBehaviour
         
         
             totalammo += maxAmmo;
-        _uimanager.UpdateAmmo2(totalammo);
+       // _uimanager.UpdateAmmo2(totalammo);
     }
-
+   
     void Shoot(bool value)
     { if (!(currentAmmo + totalammo <= 0))
         { 
         currentAmmo--;
-            _uimanager.UpdateAmmo1(currentAmmo);
+           // _uimanager.UpdateAmmo1(currentAmmo);
             if (value)
         {
             recoilScript.RecoilFire1();
