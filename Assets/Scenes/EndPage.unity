@@ -301,8 +301,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911650323}
-        m_TargetAssemblyTypeName: PauseWindow, Assembly-CSharp
+      - m_Target: {fileID: 911650328}
+        m_TargetAssemblyTypeName: endpage, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 911650326}
   - component: {fileID: 911650325}
   - component: {fileID: 911650324}
-  - component: {fileID: 911650323}
+  - component: {fileID: 911650328}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -451,20 +451,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &911650323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911650322}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6075af256d20049ae567cef608f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  IsPaused: 0
 --- !u!114 &911650324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +535,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &911650328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911650322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2330f6991d140364f917135e5d7325b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1165173097
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,9 +631,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911650323}
-        m_TargetAssemblyTypeName: PauseWindow, Assembly-CSharp
-        m_MethodName: mainmenu
+      - m_Target: {fileID: 911650328}
+        m_TargetAssemblyTypeName: endpage, Assembly-CSharp
+        m_MethodName: mainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
