@@ -14,20 +14,29 @@ public class PlayerLife : MonoBehaviour
     }
     public void HealthGain()
     {
+        if (characterhealth <= 180f)
+        { 
         characterhealth += 20f;
         _healthUI.UpdateHealth(characterhealth);
+        }
     }
 
     public void Damage1()
     {
         characterhealth -= 20f;
+        if (characterhealth > 0)
+        { 
         _healthUI.UpdateHealth(characterhealth);
+        }
     }
 
     public void Damage2()
     {
         characterhealth -= 40f;
+        if (characterhealth > 0)
+        { 
         _healthUI.UpdateHealth(characterhealth);
+        }
     }
 
     private void Update()

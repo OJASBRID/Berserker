@@ -5,7 +5,7 @@ public class EnemyDamage : MonoBehaviour
 {
     public float health = 100f;
     public GameObject[] preFab;
-    public Vector3 pos;
+    private Vector3 pos;
     public Score score;
 
     public void Damage(float amount)

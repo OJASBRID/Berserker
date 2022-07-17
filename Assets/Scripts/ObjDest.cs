@@ -33,14 +33,14 @@ public class ObjDest : MonoBehaviour
     {
 
 
-        if (hit.gameObject.CompareTag("ayenime"))
+        
         {
-            Debug.Log(hit.gameObject.name);
-            if (hit.gameObject.name == "Zombie1")
+           
+            if (hit.gameObject.name == "Zombie1" || hit.gameObject.name == "Zombie1(Clone)")
             {
                playerLife.Damage1();
             }
-            else if (hit.gameObject.name == "Zombie2")
+            else if (hit.gameObject.name == "Zombie2" || hit.gameObject.name == "Zombie2(Clone)")
             {
                 playerLife.Damage2();
             }
