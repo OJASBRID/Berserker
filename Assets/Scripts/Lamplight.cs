@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class Lamplight : MonoBehaviour
 {
-    //public GameObject[] lamps;
-    //public int count = 0;
-    //void Start()
-    //{
-    //    while (true)
-    //    {
-    //        Flicker();
-    //    }
-    //}
+    public GameObject Lamp;
+    public float time;
+    void Start()
+    {
 
-    //// Update is called once per frame
-    //void Flicker()
-    //{ 
-    //        for (int i = 0; i < 19; i++)
-    //        {
-    //            int a = 0;
-    //            Light Bulb = lamps[i].GetComponentInChildren<Light>();
-    //        int k = Random.Range(0, 2);
-    //            bool answer = (a == k);
-    //            Bulb.enabled = answer;
 
-    //        }
-    //}
+        StartCoroutine(Flicker());
+
+    }
+
+    // Update is called once per frame
+    IEnumerator Flicker()
+    {
+
+        Light Bulb = Lamp.GetComponentInChildren<Light>();
+        while (true)
+        {
+            Bulb.enabled = true;
+            yield return new WaitForSeconds(time);
+            Bulb.enabled = false;
+            yield return new WaitForSeconds(time);
+
+        }
+    }
 }
