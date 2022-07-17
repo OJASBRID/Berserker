@@ -8,9 +8,8 @@ public class SettingsLoader : MonoBehaviour
 {
    SceneManager.LoadScene("Settings") ;
 }
-public void update(){
-    if(Input.GetKeyDown(KeyCode.Escape))
-    SceneManager.LoadScene("PauseMenu");
+public void backButton(){
+    SceneManager.LoadScene("IntroPage") ;
 }
 }
 
