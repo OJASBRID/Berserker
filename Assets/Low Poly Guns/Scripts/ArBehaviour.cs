@@ -19,6 +19,7 @@ public class ArBehaviour : MonoBehaviour
     public int totalammo;
     [SerializeField] LayerMask layerMask;
     public AudioSource audioSource1;
+    public WeaponSwitch weaponSwitch1;
     
 
     public Recoil recoilScript;
@@ -70,6 +71,7 @@ public class ArBehaviour : MonoBehaviour
     IEnumerator Reload()
     {
         isReloading = true;
+        weaponSwitch1.active = true;
         Debug.Log("Reloading...");
         animator.SetBool("Reloading", true);
         yield return new WaitForSeconds(reloadTime - .25f);
@@ -95,6 +97,7 @@ public class ArBehaviour : MonoBehaviour
         
         
         isReloading = false;
+        weaponSwitch1.active = false;
 
     }
 

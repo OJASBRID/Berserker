@@ -11624,6 +11624,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4596931557434971463, guid: 7d69bbce63458e64a82c287eda71fbde,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4596931557463442992, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
       propertyPath: m_Layer
@@ -11641,6 +11646,11 @@ PrefabInstance:
       objectReference: {fileID: 1182163702}
     - target: {fileID: 4596931557486327114, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
+      propertyPath: weaponSwitch1
+      value: 
+      objectReference: {fileID: 313328057}
+    - target: {fileID: 4596931557486327114, guid: 7d69bbce63458e64a82c287eda71fbde,
+        type: 3}
       propertyPath: layerMask.m_Bits
       value: 4096
       objectReference: {fileID: 0}
@@ -11654,6 +11664,11 @@ PrefabInstance:
       propertyPath: audioSource2
       value: 
       objectReference: {fileID: 1182163702}
+    - target: {fileID: 4596931557884706855, guid: 7d69bbce63458e64a82c287eda71fbde,
+        type: 3}
+      propertyPath: weaponSwitch1
+      value: 
+      objectReference: {fileID: 313328057}
     - target: {fileID: 4596931557884706855, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
       propertyPath: layerMask.m_Bits

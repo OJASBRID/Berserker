@@ -3,24 +3,28 @@ using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour
 {
+    public bool active;
     public int weaponNo = 0;
     
     void Start()
     {
         SelectWeapon();
+        active = false;
     }
 
-   
+
     void Update()
     {
-        int previousSelectedWeapon = weaponNo; 
+        int previousSelectedWeapon = weaponNo;
 
-
+        if (!active)
+        { 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-        {   if(weaponNo >= transform.childCount - 1) 
+        {
+            if (weaponNo >= transform.childCount - 1)
                 weaponNo = 0;
             else
-            weaponNo++;
+                weaponNo++;
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
@@ -31,7 +35,7 @@ public class WeaponSwitch : MonoBehaviour
                 weaponNo--;
         }
 
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             weaponNo = 1;
         }
@@ -44,6 +48,8 @@ public class WeaponSwitch : MonoBehaviour
         if (previousSelectedWeapon != weaponNo)
         {
             SelectWeapon();
+
+        }
         }
     }
 
