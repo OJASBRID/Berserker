@@ -7,6 +7,7 @@ public class EnemyDamage : MonoBehaviour
     public GameObject[] preFab;
     private Vector3 pos;
     public Score score;
+    public spawning spawner;
 
     public void Damage(float amount)
     {
@@ -21,7 +22,7 @@ public class EnemyDamage : MonoBehaviour
             {
                 score.Shoot2();
             }
-            Destroy(gameObject);
+            
             pos.x = transform.position.x;
 
             pos.y = (float)(transform.position.y + 1);
@@ -29,6 +30,8 @@ public class EnemyDamage : MonoBehaviour
 
 
             Instantiate(preFab[Random.Range(0,3)], pos, transform.rotation);
+            Destroy(gameObject);
+            spawner.EnemyCount --;
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjDest : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class ObjDest : MonoBehaviour
                 playerLife.HealthGain();
             }
             Destroy(other.gameObject);
+        }
+
+        if( other.gameObject.name == "DoorV2")
+        {
+            SceneManager.LoadScene("EndPage 1");
         }
     }
 

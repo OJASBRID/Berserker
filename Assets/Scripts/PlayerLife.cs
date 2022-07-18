@@ -15,8 +15,11 @@ public class PlayerLife : MonoBehaviour
     public void HealthGain()
     {
         if (characterhealth <= 180f)
+        {
+            characterhealth += 20f;
+        }
+        if(characterhealth <= 200f)
         { 
-        characterhealth += 20f;
         _healthUI.UpdateHealth(characterhealth);
         }
     }

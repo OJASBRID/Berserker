@@ -26,7 +26,7 @@ public class spawning : MonoBehaviour
         positions[9] = new Vector3(52.2f, -1.7f, -1.3f);
         positions[10] = new Vector3(76.7f, -1.7f, 17.9f);
         positions[11] = new Vector3(63.5f, -1.7f, 39.1f);
-        if (EnemyCount <= 20)
+        if (EnemyCount <= 40)
         {
             StartCoroutine(EnemyDrop());
         }
