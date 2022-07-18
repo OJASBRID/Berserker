@@ -9,16 +9,18 @@ public class EnemyDamage : MonoBehaviour
     public Score score;
     public spawning spawner;
 
+
+    
     public void Damage(float amount)
     {
         health -= amount;
         if(health <= 0)
         {
-            if(gameObject.name =="Zombie1")
+            if(gameObject.name =="Zombie1(Clone)")
             {
                 score.Shoot1();
             }
-            else if(gameObject.name == "Zombie2")
+            else if(gameObject.name == "Zombie2(Clone)")
             {
                 score.Shoot2();
             }

@@ -10,6 +10,7 @@ public class spawning : MonoBehaviour
     public bool Area1;
     public bool Area2;
     public bool Area3;
+    private GameObject Game;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,8 @@ public class spawning : MonoBehaviour
                 a = 7; b = 12;
             }
 
-            Instantiate(enemies[Random.Range(0, 2)], positions[Random.Range(a, b)], Quaternion.identity);
+            Game = Instantiate(enemies[Random.Range(0, 2)], positions[Random.Range(a, b)], Quaternion.identity);
+            Game.SetActive(true);
             yield return new WaitForSeconds(3f);
 
             EnemyCount += 1;

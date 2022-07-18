@@ -26,7 +26,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Damage1()
     {
-        characterhealth -= 20f;
+        characterhealth -= 1f;
         if (characterhealth > 0)
         { 
         _healthUI.UpdateHealth(characterhealth);
@@ -35,7 +35,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Damage2()
     {
-        characterhealth -= 40f;
+        characterhealth -= 2f;
         if (characterhealth > 0)
         { 
         _healthUI.UpdateHealth(characterhealth);

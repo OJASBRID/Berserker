@@ -42,11 +42,11 @@ public class ObjDest : MonoBehaviour
         
         {
            
-            if (hit.gameObject.name == "Zombie1" || hit.gameObject.name == "Zombie1(Clone)")
+            if ( hit.gameObject.name == "Zombie1(Clone)")
             {
                playerLife.Damage1();
             }
-            else if (hit.gameObject.name == "Zombie2" || hit.gameObject.name == "Zombie2(Clone)")
+            else if ( hit.gameObject.name == "Zombie2(Clone)")
             {
                 playerLife.Damage2();
             }
