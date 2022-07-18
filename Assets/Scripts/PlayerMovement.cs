@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isWalking;
 
     Vector3 velocity;
-    bool isGrounded;
+    
     // Update is called once per frame
     
     void Update()
@@ -30,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
             pauseMenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }*/
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundmask);
+            
 
-        if(isGrounded && velocity.y < 0)
+        if(controller.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -57,5 +57,6 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        
     }
 }

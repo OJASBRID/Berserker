@@ -43,12 +43,14 @@ public class ObjDest : MonoBehaviour
         {
            
             if ( hit.gameObject.name == "Zombie1(Clone)")
-            {
+            {  
                playerLife.Damage1();
+                Physics.IgnoreCollision(gameObject.GetComponent<Collider>(),hit.gameObject.GetComponent<Collider>());
             }
             else if ( hit.gameObject.name == "Zombie2(Clone)")
             {
                 playerLife.Damage2();
+                Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), hit.gameObject.GetComponent<Collider>());
             }
         }
 
