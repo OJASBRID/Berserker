@@ -3586,7 +3586,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5000
+  m_Text: '2000 '
 --- !u!222 &907818895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7382,7 +7382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d973c71c3ef50064483b76d45f0a2f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 5000
+  score: 2000
   multiplier1: 10
   multiplier2: 30
   multiplier3: 50
@@ -11852,7 +11852,7 @@ PrefabInstance:
     - target: {fileID: 4596931556522226172, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.7
+      value: -29.28
       objectReference: {fileID: 0}
     - target: {fileID: 4596931556522226172, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
@@ -11862,7 +11862,7 @@ PrefabInstance:
     - target: {fileID: 4596931556522226172, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.6
+      value: -58.17
       objectReference: {fileID: 0}
     - target: {fileID: 4596931556522226172, guid: 7d69bbce63458e64a82c287eda71fbde,
         type: 3}

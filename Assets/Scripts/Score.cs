@@ -8,12 +8,18 @@ public class Score : MonoBehaviour
     public float score;
     public float multiplier1;
     public float multiplier2;
-    public float multiplier3;  
-   
+    public float multiplier3;
+    public static float givescore;
+
+
+    private void Start()
+    {
+        givescore = 0;
+    }
     void Update()
     {
         score = score - multiplier1*Time.deltaTime;
-
+        givescore = score ;
         if(score <= 0f)
         {
             SceneManager.LoadScene("EndPage");

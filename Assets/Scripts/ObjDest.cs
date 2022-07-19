@@ -30,7 +30,9 @@ public class ObjDest : MonoBehaviour
 
         if( other.gameObject.name == "DoorV2")
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("EndPage 1");
+
         }
     }
 
