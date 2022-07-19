@@ -9,6 +9,6 @@ public class healthUImanager : MonoBehaviour
     public Text _healthText;
     public void UpdateHealth(float health)
     {
-        _healthText.text = "Health: " + health;
+        _healthText.text = "Health: " +(int) health;
     }
 }
