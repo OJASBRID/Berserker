@@ -424,7 +424,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "1. The objective of the game is to find the door to escape.\n\n2. KEY
     INPUTS\n         =>WASD-to move player\n         =>R- reload\n         =>Mouse1-Fire\n        
-    =>Mousewheel/Number keys-weapon switch\n\n3-ENEMY DROPS\n         =>RED disc-Rifle
+    =>Mousewheel/Number keys-weapon switch\n         =>Escape- Pause the game\n        
+    =>Space- To load the instructions\n\n3-ENEMY DROPS\n         =>RED disc-Rifle
     ammo \n         =>Blue disc- pistol ammo\n         =>Yellow disc-Health"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
