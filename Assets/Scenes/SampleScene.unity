@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.101960786, g: 0.08627451, b: 0.1882353, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.15
+  m_FogDensity: 0.3
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -6407,7 +6407,7 @@ MonoBehaviour:
     keepAlpha: 0
   fog:
     enabled: 1
-    excludeSkybox: 1
+    excludeSkybox: 0
   debugLayer:
     lightMeter:
       width: 512
@@ -7633,9 +7633,9 @@ MonoBehaviour:
     zero. As you kill enemies they will drop some discs which will increase your
     health , ammo or timer . SURVIVE IF YOU CAN!\n\nKEY INPUTS\n         =>WASD-to
     move player\n         =>R- reload\n         =>Mouse1-Fire\n         =>Mousewheel/Number
-    keys-weapon switch\n\n2-ENEMY DROPS\n         =>RED disc-Rifle ammo \n        
-    =>Blue disc- pistol ammo\n         =>Yellow disc-Health\n\n                        
-    PRESS SPACE TO START THE GAME"
+    keys-weapon switch\n         =>Space - Instructions\n\n2-ENEMY DROPS\n        
+    =>RED disc-Rifle ammo \n         =>Blue disc- pistol ammo\n         =>Yellow
+    disc-Health\n\n                         PRESS SPACE TO START THE GAME"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

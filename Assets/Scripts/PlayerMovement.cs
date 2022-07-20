@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    //Animator m_Animator;
+   
 
     public GameObject pauseMenu;
     public float speed = 6f;
@@ -20,16 +20,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     
-    // Update is called once per frame
+    
     
     void Update()
     {
-      /*  if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0f;
-            pauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-        }*/
+      
             
 
         if(controller.isGrounded && velocity.y < 0)
@@ -49,10 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        /*if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); 
-        }*/
+        
 
         velocity.y += gravity * Time.deltaTime;
 

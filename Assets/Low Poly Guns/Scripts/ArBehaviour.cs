@@ -23,15 +23,14 @@ public class ArBehaviour : MonoBehaviour
     
 
     public Recoil recoilScript;
-    //public GameObject FleshImpactEffect;
-    // public GameObject ElseImpactEffect;
+    
     private ammoUImanager _uimanager;
 
     private void Start()
     {
 
         currentAmmo = maxAmmo;
-       // _uimanager = GameObject.Find("Canvas").GetComponent<ammoUImanager>();
+       
     }
 
     private void OnEnable()

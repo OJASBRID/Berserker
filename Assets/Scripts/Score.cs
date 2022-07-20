@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +17,7 @@ public class Score : MonoBehaviour
     }
     void Update()
     {
-        score = score - multiplier1*Time.deltaTime;
+        score -= multiplier1*Time.deltaTime;
         givescore = score ;
         if(score <= 0f)
         {
@@ -28,13 +27,13 @@ public class Score : MonoBehaviour
 
     public void Shoot1()
     {
-        score = score + multiplier2;
+        score += multiplier2;
         
     }
 
     public void Shoot2()
     {
-        score = score + multiplier3;
+        score += multiplier3;
 
     }
 }
