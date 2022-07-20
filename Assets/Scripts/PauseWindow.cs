@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 public class PauseWindow : MonoBehaviour
 {
    public GameObject pauseMenu;
+    public GameObject about;
     public bool IsPaused;
+    public bool aboutAct;
+ 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
-        IsPaused = false;
+        IsPaused = true;
+        aboutAct = true;
+        about.SetActive(true);
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
@@ -27,6 +34,24 @@ public class PauseWindow : MonoBehaviour
             else
             {
                 PauseGame();
+            }
+          
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (aboutAct)
+            {
+                ResumeGame();
+                about.SetActive(false);
+                aboutAct = false;
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                about.SetActive(true);
+                IsPaused = false;
+                aboutAct = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
