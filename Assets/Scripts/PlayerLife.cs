@@ -25,7 +25,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Damage1()
     {
-        characterhealth -= 1f;
+        characterhealth -= 10f*Time.deltaTime;
         if (characterhealth > 0)
         { 
         _healthUI.UpdateHealth(characterhealth);
@@ -34,7 +34,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Damage2()
     {
-        characterhealth -= 2f;
+        characterhealth -= 20f*Time.deltaTime;
         if (characterhealth > 0)
         { 
         _healthUI.UpdateHealth(characterhealth);
