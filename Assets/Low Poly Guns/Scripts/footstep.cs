@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class footstep : MonoBehaviour
 {
-    public PlayerMovement playerMovement;
+    public Rigidbody rb;
     public AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
     {
-        if (playerMovement.isWalking)
+        if (rb.velocity.magnitude >= 0.3f)
         {
             if (!audioSource.isPlaying)
             {
