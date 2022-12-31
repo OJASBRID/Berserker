@@ -253,7 +253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.0615, y: 26.20002}
+  m_AnchoredPosition: {x: 9, y: 26.20002}
   m_SizeDelta: {x: 333.0976, y: 52.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572036616
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scare: {fileID: 572036617}
+  val: 0
 --- !u!114 &572036617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +667,7 @@ RectTransform:
   m_GameObject: {fileID: 1193270891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1.02, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2029265636}
@@ -837,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: 166}
+  m_AnchoredPosition: {x: -0.0000076294, y: 146}
   m_SizeDelta: {x: 414.6722, y: 70.2687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029265637
@@ -912,6 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

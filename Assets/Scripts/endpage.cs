@@ -6,7 +6,7 @@ public class endpage : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("EditableSS");
     }
     public void mainMenu()
     {

@@ -9,6 +9,7 @@ public class PauseWindow : MonoBehaviour
     public GameObject about;
     public bool IsPaused;
     public bool aboutAct;
+   
  
     // Start is called before the first frame update
     void Start()
@@ -30,10 +31,13 @@ public class PauseWindow : MonoBehaviour
             {
                 ResumeGame();
                 IsPaused = false;
+                
+                
             }
             else
             {
                 PauseGame();
+
             }
           
         }
@@ -48,6 +52,7 @@ public class PauseWindow : MonoBehaviour
             else
             {
                 Time.timeScale = 0f;
+                AudioListener.volume = 0f;
                 about.SetActive(true);
                 IsPaused = false;
                 aboutAct = true;
@@ -61,6 +66,7 @@ public class PauseWindow : MonoBehaviour
         Time.timeScale = 0f;
         IsPaused = true;
         Cursor.lockState = CursorLockMode.None;
+        AudioListener.volume= 0f;
     }
     
     public void ResumeGame()
@@ -69,10 +75,12 @@ public class PauseWindow : MonoBehaviour
         Time.timeScale = 1f;
         IsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        AudioListener.volume = 1f;
     }
     public void Restart()
     {
         Time.timeScale = 1f;
+        AudioListener.volume = 1f;
         SceneManager.LoadScene("EditableSS");
         pauseMenu.SetActive(false);
 
@@ -80,6 +88,7 @@ public class PauseWindow : MonoBehaviour
     public void mainmenu()
     {
         Time.timeScale = 1f;
+        AudioListener.volume = 1f;
         SceneManager.LoadScene("IntroPage");
     }
 }
