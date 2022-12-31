@@ -7,7 +7,7 @@ public class Restart : MonoBehaviour
 {
    public void Button2()
 {
-SceneManager.LoadScene("SampleScene");
+SceneManager.LoadScene("EditableSS");
 
 }
 }

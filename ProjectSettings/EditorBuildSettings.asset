@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HelpPage.unity
     guid: 5e89219d9dd44924eb96c99fa1acbd3b
+  - enabled: 1
+    path: Assets/Scenes/EditableSS.unity
+    guid: a7c96e31d926ad046adb798be9b21d24
   m_configObjects: {}

@@ -7,7 +7,7 @@ public class Play : MonoBehaviour
 {
    public void Button1()
 {
-SceneManager.LoadScene("SampleScene");
+SceneManager.LoadScene("EditableSS");
         Time.timeScale = 1f;
 }
 }
